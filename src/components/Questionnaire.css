@@ -1,0 +1,77 @@
+.questionnaire__win {
+  color: #00b291;
+}
+
+.questionnaire__lost {
+  color: #ff4400;
+}
+
+.questionnaire__score {}
+
+
+
+.questionnaire__reset {
+  padding: 0.5rem;
+}
+
+.questionnaire__data {
+  display: flex;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.questionnaire__mode {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.image__breed {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
+
+.container__breeds {
+  padding-left: '2rem';
+}
+
+.container__breed {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breed__radio {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.questionnaire__button {
+  padding: 0.5rem;
+}
+
+.questionnaire__cheatbutton {
+  background-color: #bf7600;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.questionnaire__cheatmode {
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+
+@media (prefers-color-scheme: light) {
+  .questionnaire__cheatmode {
+    color: #000;
+  }
+}
