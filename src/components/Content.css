@@ -1,6 +1,7 @@
 .content__container {
   display: flex;
   width: 100%;
+  justify-content: center;
 }
 
 .content_breedslist {
@@ -9,6 +10,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.content_breedslist.d-none {
+  display: none;
 }
 
 .content__questionnaire {

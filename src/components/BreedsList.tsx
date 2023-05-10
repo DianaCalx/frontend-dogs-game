@@ -6,7 +6,7 @@ import { ReactComponent as CheckMark } from '../assets/check-mark.svg';
 import './BreedsList.css';
 
 const BreedsList = () => {
-  const { breeds, guessed} = useContext(AppContext)
+  const { breeds, guessed } = useContext(AppContext)
 
   const isGuessedBreed = (breed: string) => {
     const isGuessed = guessed.some(item => item === breed)

@@ -8,15 +8,15 @@ import './Content.css';
 
 const Content = () => {
 
-  const { breeds } = useContext(AppContext)
+  const { allBreeds, breeds } = useContext(AppContext)
 
-  if (!breeds.length) {
+  if (!allBreeds.length) {
     return <Spinner />
   }
   
   return (
     <div className='content__container'>
-      <div className='content_breedslist'>
+      <div className={`content_breedslist ${breeds.length ? 'd-block' : 'd-none'}`}>
         <BreedsList />
       </div>
       <div className='content__questionnaire'>
