@@ -1,6 +1,7 @@
 export const getBreeds = async () => {
   try {
-    const api = await fetch('https://backend-dogs-game.herokuapp.com/dogs')
+    const url = import.meta.env.VITE_API_URL;
+    const api = await fetch(`${url}/dogs`)
     const response = await api.json()
     return response
   } catch (e) {
@@ -10,7 +11,8 @@ export const getBreeds = async () => {
 
 export const getDogImage = async (breed: string) => {
   try {
-    const api = await fetch(`https://backend-dogs-game.herokuapp.com/dog?breed=${breed}`)
+    const url = import.meta.env.VITE_API_URL;
+    const api = await fetch(`${url}/dog?breed=${breed}`)
     const response = await api.json()
     return response
   } catch (e) {
