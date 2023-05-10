@@ -4,7 +4,7 @@ import { AppContext } from '../context/AppContext'
 import './Questionnaire.css';
 
 const Questionnaire = () => {
-  const { currentBreed, finished, imageUrl, isCheatMode, randomItems, score, decreaseScore, increaseScore, newGame, switchMode  } = useContext(AppContext)
+  const { currentBreed, finished, imageUrl, isCheatMode, randomOptions, score, decreaseScore, increaseScore, newGame, switchMode  } = useContext(AppContext)
   const [selectedDog, setSelectedDog] = useState<string>('')
 
   const handleSelect = () => {
@@ -50,7 +50,7 @@ const Questionnaire = () => {
       }
       {imageUrl && <img alt="Dog breed" src={imageUrl} className='image__breed'/>}
       <div className='container__breeds'>
-        {randomItems.map(dog => (
+        {randomOptions.map(dog => (
           <div key={`option-${dog}`} className='container__breed'>
             <input type='radio' id={`option-${dog}`} value={dog} checked={selectedDog === dog} onChange={() => setSelectedDog(dog)} className='breed__radio' />
             <label htmlFor={`option-${dog}`}>{dog}</label>
