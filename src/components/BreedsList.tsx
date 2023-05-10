@@ -6,7 +6,7 @@ import { ReactComponent as CheckMark } from '../assets/check-mark.svg';
 import './BreedsList.css';
 
 const BreedsList = () => {
-  const { breeds, guessed, isCheatMode, switchMode } = useContext(AppContext)
+  const { breeds, guessed} = useContext(AppContext)
 
   const isGuessedBreed = (breed: string) => {
     const isGuessed = guessed.some(item => item === breed)
@@ -15,7 +15,6 @@ const BreedsList = () => {
   
   return (
     <>
-      <button onClick={switchMode} className='breedslist__button'>Swich game to {isCheatMode ? 'normal' : 'cheat'} mode</button>
       <h2 className='breedslist__title'>List of breeds</h2>
       {breeds.map(breed => (
         <div key={breed} className='breed'>
