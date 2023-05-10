@@ -99,7 +99,7 @@ const Context = ({ children }: AppContextProps) => {
         const { status, message } = await getBreeds()
         if (status !== 'error') {
           const breeds = Object.keys(message)
-          setBreeds(breeds)
+          setBreeds(breeds.slice(0,20))
         }
       }
       fetchAllBreeds()
