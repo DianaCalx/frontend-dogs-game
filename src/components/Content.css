@@ -1,16 +1,16 @@
 .content__container {
-  display: 'flex';
-  width: '100%';
+  display: flex;
+  width: 100%;
 }
 
 .content_breedslist {
-  width: '50%';
-  display: 'flex';
-  align-items: 'center';
-  justify-content: 'center';
-  flex-direction: 'column';
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .content__questionnaire {
-  width: '50%';
+  width: 50%;
 }
