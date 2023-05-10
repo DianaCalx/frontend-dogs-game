@@ -1,0 +1,33 @@
+.breedslist__button {
+  background-color: #f58b00;
+  border: none;
+  border-radius: 0.3rem;
+  color: #373737;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+
+.breedslist__title {
+  text-decoration: underline;
+  line-height: 2rem;
+}
+
+
+.breed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breed__checkmark {
+  height: 2rem;
+  width: 2rem;
+  fill: #008000;
+}
+
+.breed__name {
+  margin-bottom: 1rem
+}
