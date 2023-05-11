@@ -80,6 +80,7 @@ const Context = ({ children }: AppContextProps) => {
     setBreeds(random)
     setNewRandomOptions({ list: random, current: nextBreed })
     setImageUrl('')
+    setIsCheatMode(false);
     dispatch({ type: AppActionKind.NEW_GAME, payload: { nextBreed } })
   }
 
