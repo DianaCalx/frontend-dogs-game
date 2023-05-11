@@ -51,12 +51,18 @@
 }
 
 .questionnaire__cheatbutton {
-  background-color: #0030c0;
+  background-color: #1a48d3;
   border: none;
   border-radius: 0.3rem;
   padding: 0.5rem;
   font-size: 0.8rem;
   font-weight: bold;
+}
+
+@media (prefers-color-scheme: light) {
+  .questionnaire__cheatbutton {
+    background-color: #4574ff;
+  }
 }
 
 .questionnaire__cheatmode {

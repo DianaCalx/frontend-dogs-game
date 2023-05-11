@@ -2,14 +2,28 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .content__container {
+    flex-direction: row;
+  }
 }
 
 .content_breedslist {
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .content_breedslist {
+    width: 50%;
+  }
 }
 
 .content_breedslist.d-none {
@@ -17,5 +31,15 @@
 }
 
 .content__questionnaire {
-  width: 50%;
+  width: 100%;
+  order: -1;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .content__questionnaire {
+    order: unset;
+    width: 50%;
+    margin-bottom: 0;
+  }
 }
