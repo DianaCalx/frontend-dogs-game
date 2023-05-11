@@ -6,10 +6,6 @@
   color: #ff4400;
 }
 
-.questionnaire__score {}
-
-
-
 .questionnaire__reset {
   padding: 0.5rem;
 }
@@ -31,7 +27,7 @@
 .image__breed {
   height: 300px;
   width: 300px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 0.3rem;
 }
 
