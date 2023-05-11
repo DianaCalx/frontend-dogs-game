@@ -39,24 +39,26 @@ const Questionnaire = () => {
       <h1>Questionnaire</h1>
       {
         currentBreed && (
-          <div className='questionnaire__data'>
-          <div className='questionnaire__mode'>
-            <button onClick={switchMode} className='questionnaire__cheatbutton'>Swich game to {isCheatMode ? 'normal' : 'cheat'} mode</button>
-            {isCheatMode && <span className='questionnaire__cheatmode'>Answer: {currentBreed}</span>}
-          </div>
-          <h3>Score: {score}pts</h3>
-        </div>
+          <>
+            <div className='questionnaire__data'>
+              <div className='questionnaire__mode'>
+                <button onClick={switchMode} className='questionnaire__cheatbutton'>Swich game to {isCheatMode ? 'normal' : 'cheat'} mode</button>
+                {isCheatMode && <span className='questionnaire__cheatmode'>Answer: {currentBreed}</span>}
+              </div>
+              <h3>Score: {score}pts</h3>
+            </div>
+            {imageUrl && <img alt="Dog breed" src={imageUrl} className='image__breed'/>}
+            <div className='container__breeds'>
+              {randomOptions.map(dog => (
+                <div key={`option-${dog}`} className='container__breed'>
+                  <input type='radio' id={`option-${dog}`} value={dog} checked={selectedDog === dog} onChange={() => setSelectedDog(dog)} className='breed__radio' />
+                  <label htmlFor={`option-${dog}`}>{dog}</label>
+                </div>
+              ))}
+            </div>
+          </>
         )
       }
-      {imageUrl && <img alt="Dog breed" src={imageUrl} className='image__breed'/>}
-      <div className='container__breeds'>
-        {randomOptions.map(dog => (
-          <div key={`option-${dog}`} className='container__breed'>
-            <input type='radio' id={`option-${dog}`} value={dog} checked={selectedDog === dog} onChange={() => setSelectedDog(dog)} className='breed__radio' />
-            <label htmlFor={`option-${dog}`}>{dog}</label>
-          </div>
-        ))}
-      </div>
       {currentBreed ? (
         <button className='questionnaire__button' onClick={handleSelect} disabled={!selectedDog}>Check</button>
       ) : (
